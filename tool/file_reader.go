@@ -55,6 +55,11 @@ func (fr *FileReader) SplitNameAndExt(fileName string) (string, string) {
 		name string
 		ext  string
 	)
+	// 如果是.abc这种格式的文件名，视为文件名为“.abc”，拓展名为“”
+	if strings.Index(fileName, ".") == 0 {
+		return fileName, ""
+	}
+
 	clips := strings.Split(fileName, ".")
 	if len(clips) > 1 {
 		name = strings.Join(clips[0:len(clips)-1], ".")

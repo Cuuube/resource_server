@@ -36,12 +36,12 @@ func (this *ResourceList) GetFilesFromDir(dirName string) ([]FileInfo, error) {
 }
 
 type FileInfo struct {
-	IsDir      bool   `json:"is_dir,omitempty"`
+	IsDir      bool   `json:"isDir,omitempty"`
 	Name       string `json:"name,omitempty"`
 	Ext        string `json:"ext,omitempty"`
 	Fullpath   string `json:"fullpath,omitempty"`
 	Size       int64  `json:"size,omitempty"`
-	ModifyTime int64  `json:"modify_time,omitempty"`
+	ModifyTime int64  `json:"modifyTime,omitempty"`
 }
 
 // 参考资料：https://books.studygolang.com/The-Golang-Standard-Library-by-Example/chapter06/06.2.html
